@@ -6,7 +6,8 @@ namespace PasswordValidation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var pass = new Password("posdkoiu");
+            pass.IsValid();
         }
     }
 }

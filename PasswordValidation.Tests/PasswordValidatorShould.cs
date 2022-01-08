@@ -24,6 +24,13 @@ namespace PasswordValidation.Tests
         {
             var pass = new Password("posdkggdsoiu");
             Assert.True(pass.IsValid());
-        |
+        }
+
+        [Fact]
+        public void FailIfPasswordDoesntHave2NumbersOrMore()
+        {
+            var pass = new Password("posdk3fhdsoiu");
+            Assert.False(pass.IsValid());
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace PasswordValidation
+﻿using System;
+
+namespace PasswordValidation
 {
     public class Password
     {
