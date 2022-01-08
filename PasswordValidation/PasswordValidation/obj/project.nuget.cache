@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uQU/jiiO42vVEBaz8OOlLWIrgXOdZtfepUZd7N0g/lsTIzIU9AsFVPxS6b/4PO/9o/0Tedmu37JRQEigRQZ6Hw==",
+  "success": true,
+  "projectFilePath": "D:\\Users\\mvila\\source\\repos\\PasswordValidation\\PasswordValidation\\PasswordValidation\\PasswordValidation.csproj",
+  "expectedPackageFiles": [
+    "D:\\Users\\mvila\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
