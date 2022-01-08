@@ -23,8 +23,8 @@ namespace PasswordValidation.Tests
         }
 
         [Theory]
-        [InlineData("pos8dk3o")]
-        [InlineData("posdkg3g3dsoiu")]
+        [InlineData("pOs8dk3o")]
+        [InlineData("Posdkg3g3dsoiu")]
         public void PassWhen8CharsOrMoreAnd2OrMoreNums(string givenPass)
         {
             var pass = new Password(givenPass);

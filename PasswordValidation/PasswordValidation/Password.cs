@@ -14,6 +14,7 @@ namespace PasswordValidation
         public bool IsValid()
         {
             int hasNum = 0;
+            int hasCap = 0;
             
             if (_inputPassword.Length >= 8)
                 foreach (var character in _inputPassword)
@@ -21,9 +22,15 @@ namespace PasswordValidation
                     if (char.IsDigit(character))
                     {
                         hasNum++;
-                        if (hasNum >= 2)
-                            return true; 
                     }
+
+                    if (char.IsUpper(character))
+                    {
+                        hasCap++;
+                    }
+
+                    if (hasNum >= 2 && hasCap >= 1)
+                        return true;
                 }
             
             return false;
