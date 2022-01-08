@@ -15,6 +15,7 @@ namespace PasswordValidation
         {
             int hasNum = 0;
             int hasCap = 0;
+            int hasSpecialChar = 0;
             
             if (_inputPassword.Length >= 8)
                 foreach (var character in _inputPassword)
@@ -29,7 +30,12 @@ namespace PasswordValidation
                         hasCap++;
                     }
 
-                    if (hasNum >= 2 && hasCap >= 1)
+                    if (!char.IsLetterOrDigit(character))
+                    {
+                        hasSpecialChar++;
+                    }
+
+                    if (hasNum >= 2 && hasCap >= 1 && hasSpecialChar >= 1)
                         return true;
                 }
             
