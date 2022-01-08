@@ -18,5 +18,12 @@ namespace PasswordValidation.Tests
             var pass = new Password("posdkoiu");
             Assert.True(pass.IsValid());
         }
+
+        [Fact]
+        public void PassIfPasswordIs8OrMoreChars()
+        {
+            var pass = new Password("posdkggdsoiu");
+            Assert.True(pass.IsValid());
+        }
     }
 }
