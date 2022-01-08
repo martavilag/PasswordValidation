@@ -16,10 +16,9 @@ namespace PasswordValidation
             int hasNum = 0;
             
             if (_inputPassword.Length >= 8)
-                for (int i = 0; i < _inputPassword.Length; i++)
+                foreach (var character in _inputPassword)
                 {
-                    char currentChar = _inputPassword[i];
-                    if (char.IsDigit(currentChar))
+                    if (char.IsDigit(character))
                     {
                         hasNum++;
                         if (hasNum >= 2)
