@@ -13,8 +13,19 @@ namespace PasswordValidation
 
         public bool IsValid()
         {
+            int hasNum = 0;
+            
             if (_inputPassword.Length >= 8)
-                return true;
+                for (int i = 0; i < _inputPassword.Length; i++)
+                {
+                    char currentChar = _inputPassword[i];
+                    if (char.IsDigit(currentChar))
+                    {
+                        hasNum++;
+                        if (hasNum >= 2)
+                            return true;
+                    }
+                }
             
             return false;
         }
