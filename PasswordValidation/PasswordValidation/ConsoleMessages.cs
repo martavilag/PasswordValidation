@@ -13,7 +13,7 @@ namespace PasswordValidation
 
         public void ErrorMessage(int hasNum, int hasCap, int hasSpecialChar)
         {
-            if (_password._inputPassword.Length < 8)
+            if (_password.InputPassword.Length < 8)
                 Console.WriteLine("Password must be at least 8 characters");
 
             if (hasNum < 2)
