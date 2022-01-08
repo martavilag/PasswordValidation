@@ -16,6 +16,13 @@ namespace PasswordValidation.Tests
             Assert.False(pass.IsValid());
         }
 
+        [Fact]
+        public void FailWhenThereAreNoSpecialChars()
+        {
+            var pass = new Password("oiU98iskp");
+            Assert.False(pass.IsValid());
+        }
+
        
         [Theory]
         [InlineData("pOs8dk3o")]
