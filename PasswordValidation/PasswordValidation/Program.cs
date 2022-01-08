@@ -6,7 +6,7 @@ namespace PasswordValidation
     {
         static void Main(string[] args)
         {
-            var pass = new Password("ususuu");
+            var pass = new Password("us45!u");
             pass.IsValid();
         }
     }

@@ -4,11 +4,13 @@ namespace PasswordValidation
 {
     public class Password
     {
-        private readonly string _inputPassword;
-        
+        public readonly string _inputPassword;
+        private readonly ConsoleMessages _consoleMessages;
+
         public Password(string inputPassword)
         {
             _inputPassword = inputPassword;
+            _consoleMessages = new ConsoleMessages(this);
         }
 
         public bool IsValid()
@@ -32,17 +34,7 @@ namespace PasswordValidation
                     return true;
             }
 
-           if (_inputPassword.Length < 8)
-               Console.WriteLine("Password must be at least 8 characters");
-
-           if (hasNum < 2)
-               Console.WriteLine("Password must contain at least 2 numbers");
-
-           if (hasCap < 1)
-               Console.WriteLine("Password must contain at least one capital letter");
-
-           if (hasSpecialChar < 1)
-               Console.WriteLine("Password must contain at least one special character");
+            _consoleMessages.ErrorMessage(hasNum, hasCap, hasSpecialChar);
 
             return false;
         }
