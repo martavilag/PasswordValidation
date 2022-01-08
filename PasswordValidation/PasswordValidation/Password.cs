@@ -11,7 +11,7 @@
 
         public bool IsValid()
         {
-            if (_inputPassword.Length == 8)
+            if (_inputPassword.Length >= 8)
                 return true;
             
             return false;

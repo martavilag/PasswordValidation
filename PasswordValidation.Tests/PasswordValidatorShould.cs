@@ -24,6 +24,6 @@ namespace PasswordValidation.Tests
         {
             var pass = new Password("posdkggdsoiu");
             Assert.True(pass.IsValid());
-        }
+        |
     }
 }
