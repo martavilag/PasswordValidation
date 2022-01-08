@@ -22,7 +22,7 @@ namespace PasswordValidation
                     {
                         hasNum++;
                         if (hasNum >= 2)
-                            return true;
+                            return true; 
                     }
                 }
             

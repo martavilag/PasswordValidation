@@ -15,6 +15,13 @@ namespace PasswordValidation.Tests
             Assert.False(pass.IsValid());
         }
 
+        [Fact]
+        public void FailWhenNoCapitalLetter()
+        {
+            var pass = new Password("oiuysjdh43");
+            Assert.False(pass.IsValid());
+        }
+
         [Theory]
         [InlineData("pos8dk3o")]
         [InlineData("posdkg3g3dsoiu")]
@@ -24,6 +31,5 @@ namespace PasswordValidation.Tests
             Assert.True(pass.IsValid());
         }
 
-       
     }
 }
