@@ -9,19 +9,14 @@ namespace PasswordValidation.Tests
         [Theory]
         [InlineData("jshuyro")]
         [InlineData("posdk3fhdsoiu")]
+        [InlineData("oiuysjdh43")]
         public void FailWhenLess8CharsAndNoNumbers(string givenPass)
         {
             var pass = new Password(givenPass);
             Assert.False(pass.IsValid());
         }
 
-        [Fact]
-        public void FailWhenNoCapitalLetter()
-        {
-            var pass = new Password("oiuysjdh43");
-            Assert.False(pass.IsValid());
-        }
-
+       
         [Theory]
         [InlineData("pOs8dk3o")]
         [InlineData("Posdkg3g3dsoiu")]
